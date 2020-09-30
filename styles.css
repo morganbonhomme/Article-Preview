@@ -76,4 +76,48 @@ div.author .icon-container img {
   margin: 13px;
 }
 
+div.authorActive {
+  display: flex;
+  margin: 40px 0px 40px 0px;
+  padding: 25px 0px;
+  background-color: #48556a;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+div.authorActive img {
+  margin: 0;
+  padding: 0;
+  color: white;
+  width: 24px;
+  height: 24px;
+}
+div.authorActive p {
+  color: #9eafc2;
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+  margin-top: 5px;
+  letter-spacing: 7px;
+  font-size: 1.1em;
+}
+div.authorActive img.logo {
+  margin: 0;
+  padding: 0;
+  margin: 0 10px;
+}
+div.authorActive .icon-containerActive {
+  background-color: #6d7f97;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-left: 30px;
+  margin-top: -4px;
+}
+div.authorActive .icon-containerActive img {
+  filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(59deg) brightness(150%) contrast(105%);
+  width: 16px;
+  height: 16px;
+  margin: 7px;
+}
+
 /*# sourceMappingURL=styles.css.map */
