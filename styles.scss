@@ -153,4 +153,74 @@ div.authorActive {
 
 
 
+// DESKTOP
+
+@media (min-width: 480px) {
+
+  div.article-preview {
+    background-color: white;
+    width: 50%;
+    margin: 50px auto;
+    height: 300px;
+    border-radius: 10px;
+  
+    h1 {
+      margin: 0;
+      padding-top: 30px;
+      padding-right: 40px;
+      font-size: 1.5em;
+      color: $very-dark-blue;
+      line-height: 150%;
+      letter-spacing: 0.03rem;
+      font-weight: $weight-medium;
+    }
+  
+    p.article-summary {
+      margin: 10px 30px 0 30px;
+      padding-right: 35px;
+      font-size: 1em;
+      color: $dark-blue;
+      line-height: 150%;
+      letter-spacing: 0.03rem;
+    }
+  }
+  
+  .img-container {
+    float: left;
+    margin: 0;
+    margin-right: 40px;
+    height: 300px;
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    overflow: hidden;
+  
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  div.author {
+    margin: 20px 30px 40px 30px;
+  
+    .icon-container {
+      background-color: $light-blue;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      margin-left: 40px;
+      margin-top: 5px;
+  
+      img {
+        width: 14px;
+        height: 14px;
+        margin: 8px;
+      }
+    }
+  }
+
+}
+
   
