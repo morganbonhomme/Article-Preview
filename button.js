@@ -1,68 +1,23 @@
-const shareBarNotActive = document.getElementById("share-bar");
-const shareButton = document.getElementById("share-button");
-const article = document.getElementById("article-preview");
+const shareButtonAuthorBar = document.querySelector("#share-button-author-bar");
+const shareButtonShareBar = document.querySelector("#share-button-share-bar");
 
+const activeShareBar = document.querySelector("#share-bar");
 let isActive = false;
 
+
+
 const toggleActiveState = () => {
-  if (!isActive) {
-    showActiveState()
+  if (isActive === false) {
+    activeShareBar.style.display = "flex";
+    shareButtonAuthorBar.style.backgroundColor = "hsl(214, 17%, 51%)";
+    shareButtonAuthorBar.children[0].style.filter = ' invert(84%) sepia(100%) saturate(0%) hue-rotate(59deg) brightness(150%) contrast(105%)'
   } else {
-    showNotActiveState()
+    activeShareBar.style.display = "none";
+    shareButtonAuthorBar.style.backgroundColor = "hsl(210, 46%, 95%)";
+    shareButtonAuthorBar.children[0].style.filter = 'none'
   }
   isActive = !isActive;
-}
-
-const showNotActiveState = () => {
-  const shareBarActive = document.querySelector('.authorActive')
-  article.removeChild(shareBarActive)
-  article.appendChild(shareBarNotActive)
-  
-  shareButton.classList.remove("icon-containerActive");
-  shareButton.classList.add("icon-container");
-  shareBarNotActive.appendChild(shareButton)
-}
-
-
-const showActiveState = () => {
-  article.removeChild(shareBarNotActive);
-
-  const shareBarActive = document.createElement("div");
-  shareBarActive.classList.add("authorActive");
-  
-  article.appendChild(shareBarActive);
-  
-  const shareText = document.createElement("p");
-  shareText.textContent = "SHARE";
-  
-  const logoDiv = document.createElement('div')
-  
-  const fbLogo = document.createElement("img");
-  fbLogo.setAttribute("src", "./images/icon-facebook.svg");
-  fbLogo.setAttribute('alt', 'facebook logo')
-  fbLogo.classList.add("logo");
-  
-  const twitterLogo = document.createElement("img");
-  twitterLogo.setAttribute("src", "./images/icon-twitter.svg");
-  twitterLogo.setAttribute('alt', 'twitter logo')
-  twitterLogo.classList.add("logo");
-  
-  const pinterestLogo = document.createElement("img");
-  pinterestLogo.setAttribute("src", "./images/icon-pinterest.svg");
-  pinterestLogo.setAttribute('alt', 'pinterest logo')
-  pinterestLogo.classList.add("logo");
-  
-  shareButton.classList.remove("icon-container");
-  shareButton.classList.add("icon-containerActive");
-  
-  logoDiv.appendChild(fbLogo);
-  logoDiv.appendChild(twitterLogo);
-  logoDiv.appendChild(pinterestLogo);
-  
-  shareBarActive.appendChild(shareText);
-  shareBarActive.appendChild(logoDiv);
-  shareBarActive.appendChild(shareButton);
 };
 
-//shareButton.addEventListener('click', showActiveState)
-shareButton.addEventListener("click", toggleActiveState);
+shareButtonAuthorBar.addEventListener("click", toggleActiveState);
+shareButtonShareBar.addEventListener("click", toggleActiveState);
